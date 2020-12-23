@@ -14,7 +14,7 @@ struct Video : Decodable {
     var thumbnail = ""
     var published = Date()
     
-    enum CodeingKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         
         case snippet
         case thumbnails
@@ -30,8 +30,9 @@ struct Video : Decodable {
     }
     
     init (from decoder: Decoder) throws {
-        let container = try decoder .container(keyedBy: CodeingKeys.self)
-        let snippetContainer =  try container.nestedContainer(keyedBy: CodeingKeys.self, forKey: .snippet)
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        let snippetContainer =  try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .snippet)
         
         //parse title
         self.title = try snippetContainer.decode(String.self, forKey: .title)
@@ -43,12 +44,14 @@ struct Video : Decodable {
         self.published = try snippetContainer.decode(Date.self, forKey: .published)
         
         //parse thumbnails
-        let thumbnailContainer = try snippetContainer.nestedContainer(keyedBy: CodeingKeys.self, forKey: .thumbnails)
-        let highContainer = try thumbnailContainer.nestedContainer(keyedBy: CodeingKeys.self, forKey: .high)
+        let thumbnailContainer = try snippetContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .thumbnails)
+        
+        let highContainer = try thumbnailContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .high)
+        
         self.thumbnail = try highContainer.decode(String.self, forKey: .thumbnail)
         
         //parse videoid
-        let resourceIdContainer = try snippetContainer.nestedContainer(keyedBy: CodeingKeys.self, forKey: .resourceId)
+        let resourceIdContainer = try snippetContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .resourceId)
         self.videoId = try resourceIdContainer.decode(String.self, forKey: .videoId)
     }
     

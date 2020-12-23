@@ -30,6 +30,7 @@ class Model {
             if error != nil || data == nil {
                 return
             }
+            
             do {
             //parsing the data into video objects
             let decoder = JSONDecoder()
