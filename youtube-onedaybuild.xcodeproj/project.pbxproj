@@ -17,6 +17,8 @@
 		0B3DC91B258E851000BCF45A /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3DC91A258E851000BCF45A /* Video.swift */; };
 		0B3DC91E258E85A100BCF45A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3DC91D258E85A100BCF45A /* Model.swift */; };
 		0B3DC921258F450500BCF45A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3DC920258F450400BCF45A /* Response.swift */; };
+		0B3DC94525974D5700BCF45A /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3DC94425974D5700BCF45A /* VideoTableViewCell.swift */; };
+		0B3DC94825997C6500BCF45A /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3DC94725997C6500BCF45A /* CacheManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		0B3DC91A258E851000BCF45A /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		0B3DC91D258E85A100BCF45A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		0B3DC920258F450400BCF45A /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		0B3DC94425974D5700BCF45A /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
+		0B3DC94725997C6500BCF45A /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 				0B3DC91A258E851000BCF45A /* Video.swift */,
 				0B3DC91D258E85A100BCF45A /* Model.swift */,
 				0B3DC920258F450400BCF45A /* Response.swift */,
+				0B3DC94425974D5700BCF45A /* VideoTableViewCell.swift */,
+				0B3DC94725997C6500BCF45A /* CacheManager.swift */,
 			);
 			path = "youtube-onedaybuild";
 			sourceTree = "<group>";
@@ -150,10 +156,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B3DC907258D2FB700BCF45A /* ViewController.swift in Sources */,
+				0B3DC94825997C6500BCF45A /* CacheManager.swift in Sources */,
 				0B3DC903258D2FB700BCF45A /* AppDelegate.swift in Sources */,
 				0B3DC905258D2FB700BCF45A /* SceneDelegate.swift in Sources */,
 				0B3DC91E258E85A100BCF45A /* Model.swift in Sources */,
 				0B3DC918258E814300BCF45A /* Constants.swift in Sources */,
+				0B3DC94525974D5700BCF45A /* VideoTableViewCell.swift in Sources */,
 				0B3DC91B258E851000BCF45A /* Video.swift in Sources */,
 				0B3DC921258F450500BCF45A /* Response.swift in Sources */,
 			);
